@@ -7,7 +7,8 @@ if (!SUPABASE_URL || !SUPABASE_PUBLISHABLE_KEY) {
   throw new Error('Faltan las variables de entorno de Supabase en src/config.js.');
 }
 
-if (SUPABASE_URL.includes('TU-PROYECTO') || SUPABASE_PUBLISHABLE_KEY.startsWith('eyJ...')) {
+// Soporta ambos formatos de Supabase: el clásico JWT (anon) y el nuevo sb_publishable_*.
+if (SUPABASE_URL.includes('TU-PROYECTO') || SUPABASE_PUBLISHABLE_KEY.includes('...')) {
   console.warn('Supabase: revisá src/config.js, todavía tiene valores de ejemplo.');
 }
 
