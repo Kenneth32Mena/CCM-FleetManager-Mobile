@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+yarn.lock
+*.log
+
+# Build
+build/
+*.apk
+*.aab
+*.hprof
+
+# Native (la carpeta android/ se versiona completa; sólo se ignoran artefactos de build)
+android/.gradle/
+android/app/build/
+android/build/
+android/local.properties
+ios/Pods/
+ios/build/
+ios/*.xcode.env.local
+*.iml
+.idea/
+.vscode/
+.DS_Store
+
+# Secrets y configuración local
+src/config.js
+.env
+.env.*
+!.env.example
