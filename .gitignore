@@ -12,6 +12,7 @@ build/
 # Native (la carpeta android/ se versiona completa; sólo se ignoran artefactos de build)
 android/.gradle/
 android/app/build/
+android/app/.cxx/
 android/build/
 android/local.properties
 ios/Pods/

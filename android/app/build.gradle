@@ -85,6 +85,13 @@ android {
         versionCode 1
         versionName "1.0"
     }
+    // CMake personalizado para enlazar libc++abi (fix de RN 0.87 + NDK 27 en Windows).
+    // Ver android/app/src/main/jni/CMakeLists.txt
+    externalNativeBuild {
+        cmake {
+            path "src/main/jni/CMakeLists.txt"
+        }
+    }
     signingConfigs {
         debug {
             storeFile file('debug.keystore')
